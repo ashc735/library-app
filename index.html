@@ -1,0 +1,53 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/app.js" defer></script>
+  <title>Luna's Library</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div class="content=wrapper">
+<header> 
+  <h1>Luna's Library</h1> 
+  <div class="navigation">
+    <dialog id="dialog">
+      <form method="dialog">
+        <p>
+          <label>
+            Title
+            <input type="text" name="title" id="title" required/>
+          </label>
+        </p>
+        <p>
+          <label>
+            Author
+            <input type="text" name="author" id="author" required/>
+          </label>
+        </p>
+        <div>
+          <input type="submit" id="add-book" value="Add Book" />
+        </div>
+      </form>
+    </dialog>
+    <p>
+      <button id="show-dialog">Add New Book</button>
+    </p>
+    <output></output>
+  </div>
+</header>
+
+<div class="bookshelf-content" id="books"></div>
+</div>
+
+</body>
+
+</html>
