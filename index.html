@@ -15,38 +15,38 @@
 </head>
 
 <body>
-<div class="content=wrapper">
-<header> 
-  <h1>Luna's Library</h1> 
-  <div class="navigation">
-    <dialog id="dialog">
-      <form method="dialog">
-        <p>
-          <label>
-            Title
-            <input type="text" name="title" id="title" required/>
-          </label>
-        </p>
-        <p>
-          <label>
-            Author
-            <input type="text" name="author" id="author" required/>
-          </label>
-        </p>
-        <div>
-          <input type="submit" id="add-book" value="Add Book" />
-        </div>
-      </form>
-    </dialog>
-    <p>
-      <button id="show-dialog">Add New Book</button>
-    </p>
-    <output></output>
-  </div>
-</header>
+  <div class="container">
+      <div class="header">
+          <h1>My Library</h1>
+      </div>
+      <div class="sidebar">
+          <div class="wrapper">
+              <button id="new-book">New Book</button>
+          </div>
+          <form id="form-element" method="post">
+              <div class="form-fields">
+                  <label for="title" class="text-fields">Title</label>
+                  <input type="text" name="title" id="title" required>
+              </div>
+              <div class="form-fields">
+                  <label for="author" class="text-fields">Author</label>
+                  <input type="text" name="author" id="author" required>
+              </div>
+              <div class="form-fields">
+                  <div class="read-checkbox">
+                      <label for="read" class="text-fields">Read</label>
+                      <input type="checkbox" name="read" id="read" value="yes">
+                  </div>
+              </div>
+              <div class="wrapper">
+                  <button id="add-book">Add Book</button>
+              </div>
+          </form>
 
-<div class="bookshelf-content" id="books"></div>
-</div>
+      </div>
+      <div class="books" id="books">
+      </div>
+  </div>
 
 </body>
 

@@ -93,70 +93,150 @@ textarea {
     padding: 0;
   }
 
-  .content-wrapper {
-    display: flex;
-    flex-flow: column wrap;
-  }
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #042ba1;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar books"
+}
 
   /*==== HEADER STYLES ====*/
 
-  header {
-    background-color: #002699;
-    opacity: 90%;
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
+  .header {
+    padding: 1em;
+    background-color: #032897;
+    grid-area: header;
+}
 
   h1 {
     color: white;
+    text-align: center;
   }
 
-  .navigation {
-    color: white;
-    font-size: 1rem;
-  }
+  /*=== Sidebar Styles ===*/
 
-  #dialog {
-    background: #000d33;
+  .sidebar {
+    background-color: #000d33;
     color: white;
     font-family: 'Noto Sans', sans-serif;
+    grid-area: sidebar;
+    padding: 20px;
   }
 
-  form {
-    font-family: 'Noto Sans', sans-serif;
-    color: white;
-  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+}
 
-  p {
-    color: white;
-    font-family: 'Noto Sans', sans-serif;
-  }
-
-  button {
+input[type=text] {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
     border: none;
-    border-radius: 37%;
-    padding: 12px 12px;
-    background: #000d33;
-    color: white;
-    font-size: 1rem;
-  }
+    padding-inline-start: 10px;
+    
+}
 
-  input[type=text] {
-    background: #000d33;
-    border: white solid 1px;
-    color: white;
-    font-family: 'Noto Sans', sans-serif;
-  }
+input[type=checkbox] {
+    width: 17px;
+    height: 1.5em;
+}
 
-  input[type=submit] {
-    border: white solid 1px;
-    background: #000d33;
-    color: white;
-    font-family: 'Noto Sans', sans-serif;
-  }
+.text-fields {
+    font-weight: 600;
+}
+
+input,
+label {
+    display: block;
+    margin: 5px;
+}
+
+input[text] {
+    width: 100px;
+    border: none;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(181, 227, 229);
+    box-shadow: 1px 1px 5px 1px var(--box-shadow-color);
+}
+
+.read-checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+#form-element {
+    display: none;
+    margin-top: 20px;
+}
+
+/*=== Book Content ===*/
+
+
+.books {
+  grid-area: books;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: min-content;
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  height: 230px;
+  box-shadow: 2px 5px 4px -2px var(--box-shadow-color);
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.card p {
+  color: var(--subtext-color);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.card .title {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 700;
+  color: black;
+}
+
+button:hover {
+  background-color: #002699;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+
 
 /* ==========================================================================
    Helper classes
